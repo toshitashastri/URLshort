@@ -1,0 +1,37 @@
+package com.symphonycommerce.shorty;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class ToImplement {
+	
+	private String slug="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	private char chars[]= slug.toCharArray();
+	private int length=7;
+	private Map<String, String> m1 = new HashMap<String, String>();
+	String domain= "http://localhost:4567";
+	
+	public String get(String shortURI) {
+		
+		  String longurl="";
+	  String key = shortURI.substring(domain.length() + 1);
+		  longurl = m1.get(key);
+			return longurl;
+
+	    //return "http://foo.tld";
+	  }
+
+	  public String set(String longURL) {
+		  String shorturl ="";
+		  String key="";
+		  if (m1.containsKey(longURL)) {
+			  shorturl = domain + "/" + m1.get(longURL);
+			} else {
+				for(int k = 0; k<7; k++){
+					key += chars[]
+				}
+				shorturl = domain + "/" + getKey(longURL);
+			}
+	    return shorturl;
+	  }
+	}
