@@ -7,8 +7,8 @@
 **/.sass-cache
 
 **/.settings
-**/.metadata
-**/Servers
-**/RemoteSystemsTempFiles
-
+.metadata
+Servers
+RemoteSystemsTempFiles
+.recommenders
 **/target/*
